@@ -1,10 +1,11 @@
 // Example usage in another component
 import React from 'react';
 import Card from '../../components/Card';
+import './index.scss';
 
 const Games = () => {
   return (
-    <div>
+    <div id="games-list">
       <Card
         title="Indie Game Title"
         price="$9.99"
