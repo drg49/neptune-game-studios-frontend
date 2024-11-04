@@ -14,7 +14,22 @@ const Games = () => {
         description="This is a brief description of the indie game."
         imageUrl="https://via.placeholder.com/200" // Replace with your image URL
       />
-      {/* Add more Card components as needed */}
+      <Card
+        title="Indie Game Title"
+        price="$9.99"
+        downloads={1500}
+        dateCreated="2023-01-01"
+        description="This is a brief description of the indie game."
+        imageUrl="https://via.placeholder.com/200" // Replace with your image URL
+      />
+      <Card
+        title="Indie Game Title"
+        price="$9.99"
+        downloads={1500}
+        dateCreated="2023-01-01"
+        description="This is a brief description of the indie game."
+        imageUrl="https://via.placeholder.com/200" // Replace with your image URL
+      />
     </div>
   );
 };

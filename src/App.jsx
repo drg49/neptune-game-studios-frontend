@@ -9,14 +9,14 @@ function App() {
         <header className="header">
           <h1 className="logo">Neptune Game Studios</h1>
           <nav className="nav">
-            <Link to="/games" className="nav-link">Games</Link>
+            <Link to="/" className="nav-link">Games</Link>
             <Link to="/about" className="nav-link">About</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
           </nav>
         </header>
         <main>
           <Routes>
-            <Route path="/games" element={<Games />} />
+            <Route path="/" element={<Games />} />
             <Route path="/about" element={<></>} />
             <Route path="/contact" element={<></>} />
           </Routes>

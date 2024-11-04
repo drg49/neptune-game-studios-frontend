@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #100e35;
+  background-color: #02002f;
   color: #ffffff;
 }
 
 .header {
-  background-color: #1e1a78;
+  background-color: #030042;
   color: white;
   padding: 20px;
   display: flex;
@@ -19,6 +21,8 @@ body {
 
 .logo {
   font-size: 24px;
+  font-weight: lighter;
+  font-family: "Orbitron", sans-serif;
   margin: 0;
 }
 
