@@ -14,6 +14,7 @@ const Games = () => {
         platform={game.platform}
         description={game.description}
         imageUrl={game.cover_img}
+        downloadLink={game.download_link}
       />
     );
   });

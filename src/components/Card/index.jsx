@@ -9,7 +9,14 @@ import {
 import "./index.scss";
 import { useConfirm } from "material-ui-confirm";
 
-const Card = ({ title, price, platform, description, coverImg }) => {
+const Card = ({
+  title,
+  price,
+  platform,
+  description,
+  coverImg,
+  downloadLink,
+}) => {
   const iconMap = {
     "PC/Mac": faComputer,
   };
@@ -43,7 +50,7 @@ const Card = ({ title, price, platform, description, coverImg }) => {
           <button className="button" onClick={handleGalleryClick}>
             View More
           </button>
-          <a className="download-link button">
+          <a className="download-link button" href={downloadLink} download>
             <FontAwesomeIcon icon={faDownload} size="small" /> Download
           </a>
         </div>
