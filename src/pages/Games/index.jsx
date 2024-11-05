@@ -1,8 +1,8 @@
 // Example usage in another component
-import React from 'react';
-import Card from '../../components/Card';
-import games from '../../game.json';
-import './index.scss';
+import React from "react";
+import Card from "../../components/Card";
+import games from "../../game.json";
+import "./index.scss";
 
 const Games = () => {
   const gameList = games.map((game, index) => {
@@ -15,12 +15,13 @@ const Games = () => {
         description={game.description}
         imageUrl={game.cover_img}
       />
-    )
+    );
   });
 
   return (
     <div id="games-list">
       {gameList}
+      <p>More games coming soon!</p>
     </div>
   );
 };

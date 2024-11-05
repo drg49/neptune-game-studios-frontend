@@ -1,20 +1,13 @@
 // src/Card.tsx
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTag, faComputer } from '@fortawesome/free-solid-svg-icons';
-import './index.scss';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTag, faComputer } from "@fortawesome/free-solid-svg-icons";
+import "./index.scss";
 
-const Card = ({
-  title,
-  price,
-  platform,
-  description,
-  coverImg,
-}) => {
-
+const Card = ({ title, price, platform, description, coverImg }) => {
   const iconMap = {
-    'PC/Mac': faComputer
-  }
+    "PC/Mac": faComputer,
+  };
 
   return (
     <div className="card">
