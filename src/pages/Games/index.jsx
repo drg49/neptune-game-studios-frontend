@@ -1,35 +1,26 @@
 // Example usage in another component
 import React from 'react';
 import Card from '../../components/Card';
+import games from '../../game.json';
 import './index.scss';
 
 const Games = () => {
+  const gameList = games.map((game, index) => {
+    return (
+      <Card
+        key={index}
+        title={game.title}
+        price={game.price}
+        platform={game.platform}
+        description={game.description}
+        imageUrl={game.cover_img}
+      />
+    )
+  });
+
   return (
     <div id="games-list">
-      <Card
-        title="Indie Game Title"
-        price="$9.99"
-        downloads={1500}
-        dateCreated="2023-01-01"
-        description="This is a brief description of the indie game."
-        imageUrl="https://via.placeholder.com/200" // Replace with your image URL
-      />
-      <Card
-        title="Indie Game Title"
-        price="$9.99"
-        downloads={1500}
-        dateCreated="2023-01-01"
-        description="This is a brief description of the indie game."
-        imageUrl="https://via.placeholder.com/200" // Replace with your image URL
-      />
-      <Card
-        title="Indie Game Title"
-        price="$9.99"
-        downloads={1500}
-        dateCreated="2023-01-01"
-        description="This is a brief description of the indie game."
-        imageUrl="https://via.placeholder.com/200" // Replace with your image URL
-      />
+      {gameList}
     </div>
   );
 };

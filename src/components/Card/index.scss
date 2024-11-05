@@ -24,8 +24,13 @@
 
 .card-info {
   display: flex;
+  align-items: center;
   gap: 15px;
   margin-bottom: 12px;
+  font-family: monospace;
+  span {
+    margin-left: 4px;
+  }
 }
 
 .card-icon {
@@ -36,5 +41,5 @@
 }
 
 .card-description {
-  margin-top: 12px;
+  margin-bottom: 0;
 }
