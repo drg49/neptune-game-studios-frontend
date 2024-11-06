@@ -15,6 +15,11 @@
 
 .card-image {
   width: 300px;
+  height: 100%;
+}
+
+.card-image-wrapper {
+  margin: 0 auto;
 }
 
 .card-title {
@@ -58,7 +63,7 @@
   color: white;
 
   svg {
-      margin-right: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -75,5 +80,11 @@
 
   &:hover {
     opacity: 0.8;
+  }
 }
+
+@media (max-width: 694px) {
+  .card {
+    flex-direction: column-reverse;
+  }
 }

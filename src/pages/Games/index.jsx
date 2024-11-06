@@ -1,27 +1,20 @@
 // Example usage in another component
-import React from "react";
-import Card from "../../components/Card";
-import games from "../../game.json";
-import "./index.scss";
+import React from 'react';
+import Card from '../../components/Card';
+import movieTheaterCover from '../../images/movie-theater.jpg';
+import './index.scss';
 
 const Games = () => {
-  const gameList = games.map((game, index) => {
-    return (
-      <Card
-        key={index}
-        title={game.title}
-        price={game.price}
-        platform={game.platform}
-        description={game.description}
-        imageUrl={game.cover_img}
-        downloadLink={game.download_link}
-      />
-    );
-  });
-
   return (
     <div id="games-list">
-      {gameList}
+      <Card
+        title="The Movie Theater"
+        price="Free"
+        platform="PC/Mac"
+        description="In a small, isolated town in the woods, a movie theater worker begins their first night shift. What starts as a quiet, eerie evening soon takes a sinister turn as strange and unsettling events begin to unfold."
+        coverImg={movieTheaterCover}
+        downloadLink="https://movie-theater-game-drg-software.s3.us-east-1.amazonaws.com/MovieTheaterGame.zip"
+      />
       <p>More games coming soon!</p>
     </div>
   );

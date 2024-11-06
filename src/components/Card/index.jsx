@@ -1,13 +1,13 @@
 // src/Card.tsx
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTag,
   faComputer,
   faDownload,
-} from "@fortawesome/free-solid-svg-icons";
-import "./index.scss";
-import { useConfirm } from "material-ui-confirm";
+} from '@fortawesome/free-solid-svg-icons';
+import './index.scss';
+import { useConfirm } from 'material-ui-confirm';
 
 const Card = ({
   title,
@@ -18,7 +18,7 @@ const Card = ({
   downloadLink,
 }) => {
   const iconMap = {
-    "PC/Mac": faComputer,
+    'PC/Mac': faComputer,
   };
 
   const confirm = useConfirm();
@@ -27,7 +27,7 @@ const Card = ({
     confirm({
       title,
       content: <>Hello World</>,
-      confirmationButtonProps: { style: { display: "none" } },
+      confirmationButtonProps: { style: { display: 'none' } },
     }).catch(() => {});
   };
 
@@ -55,7 +55,9 @@ const Card = ({
           </a>
         </div>
       </div>
-      <img src={coverImg} alt={title} className="card-image" />
+      <div className='card-image-wrapper'>
+        <img src={coverImg} alt={title} className="card-image" />
+      </div>
     </div>
   );
 };
