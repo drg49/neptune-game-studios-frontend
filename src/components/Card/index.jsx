@@ -51,11 +51,11 @@ const Card = ({
             View More
           </button>
           <a className="download-link button" href={downloadLink} download>
-            <FontAwesomeIcon icon={faDownload} size="small" /> Download
+            <FontAwesomeIcon icon={faDownload} /> Download
           </a>
         </div>
       </div>
-      <div className='card-image-wrapper'>
+      <div className="card-image-wrapper">
         <img src={coverImg} alt={title} className="card-image" />
       </div>
     </div>
