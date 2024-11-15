@@ -15,6 +15,7 @@ import { useConfirm } from 'material-ui-confirm';
 
 const Card = ({
   title,
+  content,
   price,
   platform,
   description,
@@ -30,30 +31,7 @@ const Card = ({
   const handleGalleryClick = () => {
     confirm({
       title,
-      content: (
-        <>
-          <p>
-            <strong>Genre:</strong> First Person Horror Game
-          </p>
-          <p>
-            <strong>Controls:</strong>
-          </p>
-          <ul>
-            <li>
-              <strong>ESC</strong> = Pause Game
-            </li>
-            <li>
-              <strong>WASD</strong> and <strong>Arrows</strong> = Move
-            </li>
-            <li>
-              <strong>R</strong> = Reload
-            </li>
-            <li>
-              <strong>F</strong> = Toggle Weapon
-            </li>
-          </ul>
-        </>
-      ),
+      content,
       confirmationButtonProps: { style: { display: 'none' } },
     }).catch(() => {});
   };
