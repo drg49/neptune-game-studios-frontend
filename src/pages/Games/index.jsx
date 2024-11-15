@@ -10,7 +10,7 @@ const Games = () => {
       <Card
         title="The Movie Theater"
         price="Free"
-        platform="PC/Mac"
+        platform="Windows/PC"
         description="In a small, isolated town in the woods, a movie theater worker begins their first night shift. What starts as a quiet, eerie evening soon takes a sinister turn as strange and unsettling events begin to unfold."
         coverImg={movieTheaterCover}
         downloadLink="https://movie-theater-game-drg-software.s3.us-east-1.amazonaws.com/MovieTheaterGame.zip"

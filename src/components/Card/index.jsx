@@ -18,7 +18,7 @@ const Card = ({
   downloadLink,
 }) => {
   const iconMap = {
-    'PC/Mac': faComputer,
+    'Windows/PC': faComputer,
   };
 
   const confirm = useConfirm();
@@ -26,7 +26,30 @@ const Card = ({
   const handleGalleryClick = () => {
     confirm({
       title,
-      content: <>Hello World</>,
+      content: (
+        <>
+          <p>
+            <strong>Genre:</strong> First Person Horror Game
+          </p>
+          <p>
+            <strong>Controls:</strong>
+          </p>
+          <ul>
+            <li>
+              <strong>ESC</strong> = Pause Game
+            </li>
+            <li>
+              <strong>WASD</strong> and <strong>Arrows</strong> = Move
+            </li>
+            <li>
+              <strong>R</strong> = Reload
+            </li>
+            <li>
+              <strong>F</strong> = Toggle Weapon
+            </li>
+          </ul>
+        </>
+      ),
       confirmationButtonProps: { style: { display: 'none' } },
     }).catch(() => {});
   };
