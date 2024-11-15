@@ -6,6 +6,10 @@ import {
   faComputer,
   faDownload,
 } from '@fortawesome/free-solid-svg-icons';
+import zipFile from '../../images/zip-file.png';
+import zipExtract from '../../images/zip-extract.png';
+import zipModal from '../../images/zip-modal.png';
+import gameFile from '../../images/game-file.png';
 import './index.scss';
 import { useConfirm } from 'material-ui-confirm';
 
@@ -54,6 +58,38 @@ const Card = ({
     }).catch(() => {});
   };
 
+  // Instructions for extracting zip file.
+  const openDownloadModal = () => {
+    confirm({
+      title: 'Your game is downloading!',
+      titleProps: { fontWeight: 700 },
+      content: (
+        <>
+          <p>You should see the zip file in your downloads.</p>
+          <img src={zipFile} alt="zip file for movie theater game" />
+          <p>
+            Once the download is complete, left click on the folder and choose:
+            <br />
+            <strong>Extract All...</strong>
+          </p>
+          <img src={zipExtract} alt="zip extract instructions" />
+          <p>
+            Click <strong>Extract</strong>. The zip file will be extracted in
+            the same location where it was downloaded.
+          </p>
+          <img src={zipModal} alt="zip modal" />
+          <p>
+            After the zip is done extracting, click{' '}
+            <strong>The Movie Theater</strong> application (.exe) in the folder.
+          </p>
+          <img src={gameFile} alt="movie theater game .exe" />
+        </>
+      ),
+      cancellationButtonProps: { style: { display: 'none' } },
+      contentProps: { style: { maxHeight: '500px' } },
+    });
+  };
+
   return (
     <div className="card">
       <div className="card-content">
@@ -73,7 +109,12 @@ const Card = ({
           <button className="button" onClick={handleGalleryClick}>
             View More
           </button>
-          <a className="download-link button" href={downloadLink} download>
+          <a
+            className="download-link button"
+            href={downloadLink}
+            onClick={openDownloadModal}
+            download
+          >
             <FontAwesomeIcon icon={faDownload} /> Download
           </a>
         </div>
