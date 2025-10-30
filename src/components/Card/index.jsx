@@ -39,11 +39,17 @@ const Card = ({
   // Instructions for extracting zip file.
   const openDownloadModal = () => {
     confirm({
-      title: 'Your game is downloading!',
+      title: `Thank you for downloading ${title} game!`,
       titleProps: { fontWeight: 700 },
       content: (
         <>
-          <p>You should see the zip file in your downloads.</p>
+          <p>
+            After downloading the game on{' '}
+            <a href={downloadLink} target="_blank" rel="noopener noreferrer">
+              Itch.io
+            </a>{' '}
+            (where it's hosted), you will see the zip file in your downloads.
+          </p>
           <img src={zipFile} alt="zip file for movie theater game" />
           <p>
             Once the download is complete, left click on the folder and choose:
@@ -91,9 +97,10 @@ const Card = ({
             className="download-link button"
             href={downloadLink}
             onClick={openDownloadModal}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faDownload} /> Download
+            <FontAwesomeIcon icon={faDownload} /> Download Here
           </a>
         </div>
       </div>
