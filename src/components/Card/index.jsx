@@ -5,7 +5,8 @@ import {
   faTag,
   faComputer,
   faDownload,
-  faGlobe
+  faGlobe,
+  faPlay
 } from "@fortawesome/free-solid-svg-icons";
 import zipFile from "../../images/zip-file.png";
 import zipExtract from "../../images/zip-extract.png";
@@ -26,10 +27,13 @@ const Card = ({
 }) => {
   const iconMap = {
     "Windows/PC": faComputer,
-    "Browser": faGlobe,
+    Browser: faGlobe,
   };
 
   const confirm = useConfirm();
+
+  const isBrowser =
+    platform === "Browser" || (title && title.toLowerCase().includes("flappy"));
 
   const handleGalleryClick = () => {
     confirm({
@@ -96,15 +100,26 @@ const Card = ({
           <button className="button" onClick={handleGalleryClick}>
             View More
           </button>
-          <a
-            className="download-link button"
-            href={downloadLink}
-            onClick={openDownloadModal}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faDownload} /> {downloadText}
-          </a>
+          {isBrowser ? (
+            <a
+              className="download-link button"
+              href={downloadLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faPlay} /> Play Now
+            </a>
+          ) : (
+            <a
+              className="download-link button"
+              href={downloadLink}
+              onClick={openDownloadModal}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faDownload} /> {downloadText}
+            </a>
+          )}
         </div>
       </div>
       <div className="card-image-wrapper">
