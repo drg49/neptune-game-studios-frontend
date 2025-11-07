@@ -2,6 +2,7 @@
 import React from "react";
 import Card from "../../components/Card";
 import movieTheaterCover from "../../images/movie-theater.jpg";
+import flappyPenguinCover from "../../images/flappy-penguin.png";
 import "./index.scss";
 
 const Games = () => {
@@ -74,8 +75,8 @@ const Games = () => {
         price="Free"
         platform="Browser"
         description="Flappy Penguin is an addictive and challenging 2D arcade game where players control a cute penguin navigating through a series of icy obstacles. The objective is to fly as far as possible without crashing into the obstacles, earning points for each successful pass."
-        coverImg={movieTheaterCover}
-        downloadLink="https://neptunegamestudios.itch.io/the-movie-theater"
+        coverImg={flappyPenguinCover}
+        downloadLink="https://flappy-penguin-two.vercel.app/"
         downloadText="Play Now"
       />
       <p>More games coming soon!</p>
