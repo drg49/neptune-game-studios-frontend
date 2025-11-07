@@ -1,8 +1,8 @@
 // Example usage in another component
-import React from 'react';
-import Card from '../../components/Card';
-import movieTheaterCover from '../../images/movie-theater.jpg';
-import './index.scss';
+import React from "react";
+import Card from "../../components/Card";
+import movieTheaterCover from "../../images/movie-theater.jpg";
+import "./index.scss";
 
 const Games = () => {
   return (
@@ -47,6 +47,36 @@ const Games = () => {
         description="In a small, isolated town in the woods, a movie theater worker begins their first night shift. What starts as a quiet, eerie evening soon takes a sinister turn as strange and unsettling events begin to unfold."
         coverImg={movieTheaterCover}
         downloadLink="https://neptunegamestudios.itch.io/the-movie-theater"
+      />
+      <Card
+        title="Flappy Penguin"
+        content={
+          <>
+            <p>
+              <strong>Genre:</strong> 2D Arcade Game
+            </p>
+            <p>
+              <strong>Platforms:</strong> Browser
+            </p>
+            <p>
+              <strong>Release Date:</strong> November 7th, 2025
+            </p>
+            <p>
+              <strong>Controls:</strong>
+            </p>
+            <ul>
+              <li>
+                <strong>Spacebar / MouseButton / Touch</strong> = Fly
+              </li>
+            </ul>
+          </>
+        }
+        price="Free"
+        platform="Browser"
+        description="Flappy Penguin is an addictive and challenging 2D arcade game where players control a cute penguin navigating through a series of icy obstacles. The objective is to fly as far as possible without crashing into the obstacles, earning points for each successful pass."
+        coverImg={movieTheaterCover}
+        downloadLink="https://neptunegamestudios.itch.io/the-movie-theater"
+        downloadText="Play Now"
       />
       <p>More games coming soon!</p>
     </div>
