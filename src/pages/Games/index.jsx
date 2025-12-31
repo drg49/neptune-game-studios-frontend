@@ -41,6 +41,7 @@ const Games = () => {
         description="Three friends camp in the North Woods of Maine, but thick fog, eerie whispers, and a lurking shadow turn their trip into a fight for survival."
         coverImg={whisperingPinesCover}
         downloadLink="https://neptunegamestudios.itch.io"
+        comingSoon
       />
       <Card
         title="The Movie Theater"

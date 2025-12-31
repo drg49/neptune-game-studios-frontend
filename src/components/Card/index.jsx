@@ -21,6 +21,7 @@ const Card = ({
   description,
   coverImg,
   downloadLink,
+  comingSoon = false,
   downloadText = 'Download Here',
 }) => {
   const iconMap = {
@@ -79,6 +80,45 @@ const Card = ({
     });
   };
 
+  const renderButton = () => {
+    if (isBrowser) {
+      return (
+        <a
+          className="download-link button"
+          href={downloadLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faPlay} /> Play Now
+        </a>
+      );
+    } else if (comingSoon) {
+      return (
+        <a
+          className="download-link button"
+          href={downloadLink}
+          onClick={openDownloadModal}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Studio Page
+        </a>
+      );
+    } else {
+      return (
+        <a
+          className="download-link button"
+          href={downloadLink}
+          onClick={openDownloadModal}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faDownload} /> {downloadText}
+        </a>
+      );
+    }
+  };
+
   return (
     <div className="card">
       <div className="card-content">
@@ -98,26 +138,7 @@ const Card = ({
           <button className="button" onClick={handleGalleryClick}>
             View More
           </button>
-          {isBrowser ? (
-            <a
-              className="download-link button"
-              href={downloadLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faPlay} /> Play Now
-            </a>
-          ) : (
-            <a
-              className="download-link button"
-              href={downloadLink}
-              onClick={openDownloadModal}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faDownload} /> {downloadText}
-            </a>
-          )}
+          {renderButton()}
         </div>
       </div>
       <div className="card-image-wrapper">
