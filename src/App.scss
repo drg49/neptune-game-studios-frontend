@@ -89,8 +89,8 @@ body {
     border-bottom: 1px solid #030042;
   }
 
-  .nav-link + .nav-link {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  .nav-link:last-child {
+    border-bottom: none;
   }
 
   .nav-toggle {
