@@ -4,13 +4,28 @@ import 'font-awesome/css/font-awesome.min.css';
 
 const videos = [
   {
-    id: 'movie-theater-demo',
+    id: 'FI9SQs8qDTE',
     title: 'The Movie Theater - Demo Gameplay',
     link: 'https://www.youtube.com/watch?v=FI9SQs8qDTE&t=1s',
   },
 ];
 
-const getEmbedUrl = (id) => `https://www.youtube.com/embed/${id}?rel=0`;
+const extractYouTubeId = (input) => {
+  try {
+    const url = new URL(input);
+    if (url.hostname.includes('youtu.be')) return url.pathname.slice(1);
+    if (url.hostname.includes('youtube.com'))
+      return url.searchParams.get('v') || '';
+  } catch (e) {
+    // input may already be a plain ID
+  }
+  return input;
+};
+
+const getEmbedUrl = (idOrUrl) => {
+  const id = extractYouTubeId(idOrUrl);
+  return `https://www.youtube.com/embed/${id}?rel=0`;
+};
 
 const Media = () => {
   const [selected, setSelected] = useState(videos[0]);
