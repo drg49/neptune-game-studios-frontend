@@ -20,10 +20,19 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 24px;
   font-weight: lighter;
   font-family: 'Orbitron', sans-serif;
   margin: 0;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .nav {
@@ -100,6 +109,22 @@ body {
 
   .header {
     align-items: center;
+  }
+}
+
+@media (max-width: 437px) {
+  .header {
+    padding: 15px;
+  }
+  .logo {
+    gap: 0.25rem;
+  }
+  .logo-icon {
+    width: 27px;
+    height: 24px;
+  }
+  .logo-text {
+    font-size: 20px;
   }
 }
 

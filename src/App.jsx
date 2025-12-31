@@ -4,13 +4,17 @@ import { Route, Routes, Link } from 'react-router-dom';
 import { useState } from 'react';
 import './App.scss';
 import About from './pages/About';
+import neptuneIcon from './images/neptune-icon.png';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div>
       <header className="header">
-        <h1 className="logo">Neptune Game Studios</h1>
+        <h1 className="logo">
+          <img src={neptuneIcon} alt="Neptune icon" className="logo-icon" />
+          <span className="logo-text">Neptune Game Studios</span>
+        </h1>
         <button
           className={`nav-toggle ${menuOpen ? 'open' : ''}`}
           aria-expanded={menuOpen}
