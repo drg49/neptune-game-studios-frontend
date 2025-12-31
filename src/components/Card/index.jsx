@@ -1,19 +1,17 @@
-// src/Card.tsx
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTag,
   faComputer,
   faDownload,
   faGlobe,
-  faPlay
-} from "@fortawesome/free-solid-svg-icons";
-import zipFile from "../../images/zip-file.png";
-import zipExtract from "../../images/zip-extract.png";
-import zipModal from "../../images/zip-modal.png";
-import gameFile from "../../images/game-file.png";
-import "./index.scss";
-import { useConfirm } from "material-ui-confirm";
+  faPlay,
+} from '@fortawesome/free-solid-svg-icons';
+import zipFile from '../../images/zip-file.png';
+import zipExtract from '../../images/zip-extract.png';
+import zipModal from '../../images/zip-modal.png';
+import gameFile from '../../images/game-file.png';
+import './index.scss';
+import { useConfirm } from 'material-ui-confirm';
 
 const Card = ({
   title,
@@ -23,23 +21,23 @@ const Card = ({
   description,
   coverImg,
   downloadLink,
-  downloadText = "Download Here",
+  downloadText = 'Download Here',
 }) => {
   const iconMap = {
-    "Windows/PC": faComputer,
+    'Windows/PC': faComputer,
     Browser: faGlobe,
   };
 
   const confirm = useConfirm();
 
   const isBrowser =
-    platform === "Browser" || (title && title.toLowerCase().includes("flappy"));
+    platform === 'Browser' || (title && title.toLowerCase().includes('flappy'));
 
   const handleGalleryClick = () => {
     confirm({
       title,
       content,
-      confirmationButtonProps: { style: { display: "none" } },
+      confirmationButtonProps: { style: { display: 'none' } },
     }).catch(() => {});
   };
 
@@ -51,10 +49,10 @@ const Card = ({
       content: (
         <>
           <p>
-            After downloading the game on{" "}
+            After downloading the game on{' '}
             <a href={downloadLink} target="_blank" rel="noopener noreferrer">
               Itch.io
-            </a>{" "}
+            </a>{' '}
             (where it's hosted), you will see the zip file in your downloads.
           </p>
           <img src={zipFile} alt="zip file for movie theater game" />
@@ -70,14 +68,14 @@ const Card = ({
           </p>
           <img src={zipModal} alt="zip modal" />
           <p>
-            After the zip is done extracting, click{" "}
+            After the zip is done extracting, click{' '}
             <strong>The Movie Theater</strong> application (.exe) in the folder.
           </p>
           <img src={gameFile} alt="movie theater game .exe" />
         </>
       ),
-      cancellationButtonProps: { style: { display: "none" } },
-      contentProps: { style: { maxHeight: "500px" } },
+      cancellationButtonProps: { style: { display: 'none' } },
+      contentProps: { style: { maxHeight: '500px' } },
     });
   };
 

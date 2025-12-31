@@ -1,13 +1,47 @@
-// Example usage in another component
-import React from "react";
-import Card from "../../components/Card";
-import movieTheaterCover from "../../images/movie-theater.jpg";
-import flappyPenguinCover from "../../images/flappy-penguin.png";
-import "./index.scss";
+import Card from '../../components/Card';
+import movieTheaterCover from '../../images/movie-theater.jpeg';
+import flappyPenguinCover from '../../images/flappy-penguin.png';
+import whisperingPinesCover from '../../images/whispering-pines.png';
+import './index.scss';
 
 const Games = () => {
   return (
     <div id="games-list">
+      <Card
+        title="Whispering Pines (Coming Soon)"
+        content={
+          <>
+            <p>
+              <strong>Genre:</strong> First Person Horror Game
+            </p>
+            <p>
+              <strong>Platforms:</strong> Windows/PC Only
+            </p>
+            <p>
+              <strong>Release Date:</strong> Coming Soon in 2026
+            </p>
+            <p>
+              <strong>Controls:</strong>
+            </p>
+            <ul>
+              <li>
+                <strong>ESC</strong> = Pause Game
+              </li>
+              <li>
+                <strong>WASD</strong> or <strong>Arrows</strong> = Move
+              </li>
+              <li>
+                <strong>Shift</strong> = Run
+              </li>
+            </ul>
+          </>
+        }
+        price="Not Available"
+        platform="Windows/PC"
+        description="Three friends camp in the North Woods of Maine, but thick fog, eerie whispers, and a lurking shadow turn their trip into a fight for survival."
+        coverImg={whisperingPinesCover}
+        downloadLink="https://neptunegamestudios.itch.io"
+      />
       <Card
         title="The Movie Theater"
         content={
@@ -79,7 +113,7 @@ const Games = () => {
         downloadLink="https://flappy-penguin-two.vercel.app/"
         downloadText="Play Now"
       />
-      <p>More games coming soon!</p>
+      <br />
     </div>
   );
 };

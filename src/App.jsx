@@ -1,8 +1,7 @@
-import React from "react";
-import Games from "./pages/Games";
-import { Route, Routes, Link } from "react-router-dom";
-import "./App.scss";
-import About from "./pages/About";
+import Games from './pages/Games';
+import { Route, Routes, Link } from 'react-router-dom';
+import './App.scss';
+import About from './pages/About';
 
 function App() {
   return (
