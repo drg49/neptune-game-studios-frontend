@@ -97,7 +97,6 @@ const Card = ({
         <a
           className="download-link button"
           href={downloadLink}
-          onClick={openDownloadModal}
           target="_blank"
           rel="noopener noreferrer"
         >

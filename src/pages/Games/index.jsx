@@ -38,7 +38,7 @@ const Games = () => {
         }
         price="Not Available"
         platform="Windows/PC"
-        description="Three friends camp in the North Woods of Maine, but thick fog, eerie whispers, and a lurking shadow turn their trip into a fight for survival."
+        description="Three friends set out for a camping trip in the woods. Thick fog, eerie whispers, and a lurking shadow soon turn their adventure into a fight for survival."
         coverImg={whisperingPinesCover}
         downloadLink="https://neptunegamestudios.itch.io"
         comingSoon
@@ -54,7 +54,7 @@ const Games = () => {
               <strong>Platforms:</strong> Windows/PC Only
             </p>
             <p>
-              <strong>Release Date:</strong> November 15th, 2024
+              <strong>Release Date:</strong> October 30th, 2025
             </p>
             <p>
               <strong>Controls:</strong>
@@ -80,7 +80,7 @@ const Games = () => {
         }
         price="Free"
         platform="Windows/PC"
-        description="In a small, isolated town in the woods, a movie theater worker begins their first night shift. What starts as a quiet, eerie evening soon takes a sinister turn as strange and unsettling events begin to unfold."
+        description="Working late at the movie theater, an employee experiences a quiet, eerie evening that quickly spirals into strange and unsettling events."
         coverImg={movieTheaterCover}
         downloadLink="https://neptunegamestudios.itch.io/the-movie-theater"
       />
